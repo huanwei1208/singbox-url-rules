@@ -17,25 +17,25 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026070201-robinhood
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026070201-robinhood
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026070201-robinhood
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026070201-robinhood
 ```
 
 Fallback URL:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf
 ```
 
 jsDelivr mirror:
 
 ```text
-https://cdn.jsdelivr.net/gh/Hwloser/singbox-url-rules@main/shadowrocket/shadowrocket-cn-direct.conf
+https://cdn.jsdelivr.net/gh/huanwei1208/singbox-url-rules@main/shadowrocket/shadowrocket-cn-direct.conf
 ```
 
 Note: GitHub raw can cache 404 or stale content for a few minutes. jsDelivr can
@@ -48,15 +48,15 @@ Clash Verge cannot directly import the Shadowrocket `.conf` profile. Clash
 Verge uses Clash/Mihomo YAML, so use the Clash-specific rule-provider files:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/ruleset-reject.yaml
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/ruleset-direct.yaml
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/ruleset-proxy.yaml
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/ruleset-reject.yaml
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/ruleset-direct.yaml
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/ruleset-proxy.yaml
 ```
 
 Template profile with placeholder node fields:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/profile-template.yaml
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/profile-template.yaml
 ```
 
 Do not publish a filled Clash Verge profile because it contains VLESS Reality

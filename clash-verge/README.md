@@ -12,14 +12,14 @@ VLESS UUIDs, Reality keys, subscription URLs, or node credentials.
 Reject WebRTC/STUN/TURN privacy endpoints:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/ruleset-reject.yaml
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/ruleset-reject.yaml
 ```
 
 Direct local, Hong Kong, China, Apple App Store, China DNS, China AI, and China
 daily app traffic:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/ruleset-direct.yaml
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/ruleset-direct.yaml
 ```
 
 Proxy foreign AI, Gemini, Google AI dependencies, foreign social/messaging,
@@ -27,13 +27,13 @@ GitHub/developer platforms, TradingView, Wise, Robinhood, non-HK overseas
 brokerages, OKX, Binance, and BiyaPay:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/ruleset-proxy.yaml
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/ruleset-proxy.yaml
 ```
 
 Template profile:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/profile-template.yaml
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/profile-template.yaml
 ```
 
 The template contains placeholder node fields. Do not publish a filled profile
@@ -43,9 +43,9 @@ If Clash Verge keeps using stale cached providers, replace the provider URLs
 with cache-busting URLs and new local paths:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026070201-robinhood
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026070201-robinhood
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026070201-robinhood
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026070201-robinhood
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026070201-robinhood
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026070201-robinhood
 ```
 
 ## Rule Order
