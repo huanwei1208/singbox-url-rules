@@ -74,22 +74,22 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062801-wemeet
-    path: ./ruleset-reject-2026062801.yaml
+    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026070201-robinhood
+    path: ./ruleset-reject-2026070201.yaml
     interval: 86400
   cn-direct:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062801-wemeet
-    path: ./ruleset-direct-2026062801.yaml
+    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026070201-robinhood
+    path: ./ruleset-direct-2026070201.yaml
     interval: 86400
   foreign-proxy:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062801-wemeet
-    path: ./ruleset-proxy-2026062801.yaml
+    url: https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026070201-robinhood
+    path: ./ruleset-proxy-2026070201.yaml
     interval: 86400
 
 rules:

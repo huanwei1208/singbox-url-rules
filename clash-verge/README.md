@@ -23,8 +23,8 @@ https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/rul
 ```
 
 Proxy foreign AI, Gemini, Google AI dependencies, foreign social/messaging,
-GitHub/developer platforms, TradingView, Wise, non-HK overseas brokerages, OKX,
-Binance, and BiyaPay:
+GitHub/developer platforms, TradingView, Wise, Robinhood, non-HK overseas
+brokerages, OKX, Binance, and BiyaPay:
 
 ```text
 https://raw.githubusercontent.com/Hwloser/singbox-url-rules/main/clash-verge/ruleset-proxy.yaml
@@ -43,9 +43,9 @@ If Clash Verge keeps using stale cached providers, replace the provider URLs
 with cache-busting URLs and new local paths:
 
 ```text
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026062801-wemeet
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026062801-wemeet
-https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026062801-wemeet
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026070201-robinhood
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026070201-robinhood
+https://raw.githubusercontent.com/Hwloser/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026070201-robinhood
 ```
 
 ## Rule Order
@@ -69,8 +69,9 @@ keeps domains such as Google-owned `.cn` hosts or `okx.com.cn` on the proxy path
 when they are intentionally listed in `foreign-proxy`.
 
 The explicit proxy provider is placed before the broad HK/CN direct rules. This
-keeps intentionally proxied services such as BIT, Bitget, Wise, OKX, Binance,
-and Google on the proxy path even if they use mixed regional infrastructure.
+keeps intentionally proxied services such as BIT, Bitget, Wise, Robinhood, OKX,
+Binance, and Google on the proxy path even if they use mixed regional
+infrastructure.
 
 Do not add broad `DST-PORT` rejects for STUN/TURN ports such as 3478, 5349, or
 19302-19309 in this Clash/Mihomo profile. They can break legitimate meeting
