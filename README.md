@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026070201-robinhood
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071001-cebbank
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026070201-robinhood
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071001-cebbank
 ```
 
 Fallback URL:
@@ -82,6 +82,9 @@ Rule behavior:
   Alipay, WeChat/Weixin, Douyin, Bilibili, Alibaba/Taobao/Tmall, JD,
   Pinduoduo, Meituan, Zhihu, CHSI, 163/Netease, WPS/Kingsoft, and common
   domestic video platforms.
+- Mainland China banking domains go `DIRECT`, including China Everbright Bank
+  (`cebbank.com`, `cebbank.com.cn`, `95595.com`) and the Everbright Group
+  domain (`ebchina.com`) that can appear in related domestic flows.
 - Tencent Meeting/Wemeet/VooV Meeting goes `DIRECT`. Clash/Mihomo profiles do
   not use broad port-based STUN/TURN rejects, because those can break meeting
   audio/video paths.

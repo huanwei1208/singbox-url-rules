@@ -162,6 +162,10 @@ payload:
   - DOMAIN-SUFFIX,hexin.cn
   - DOMAIN-SUFFIX,duolingo.cn
   - DOMAIN-SUFFIX,icloud.com.cn
+  - DOMAIN-SUFFIX,cebbank.com
+  - DOMAIN-SUFFIX,cebbank.com.cn
+  - DOMAIN-SUFFIX,95595.com
+  - DOMAIN-SUFFIX,ebchina.com
   - DOMAIN-KEYWORD,alipay
   - DOMAIN-KEYWORD,wechat
   - DOMAIN-KEYWORD,weixin
@@ -174,6 +178,7 @@ payload:
   - DOMAIN-KEYWORD,10jqka
   - DOMAIN-KEYWORD,douyin
   - DOMAIN-KEYWORD,bilibili
+  - DOMAIN-KEYWORD,cebbank
   - DOMAIN-SUFFIX,hk
   - DOMAIN-SUFFIX,longbridge.com
   - DOMAIN-SUFFIX,longbridge.sg
