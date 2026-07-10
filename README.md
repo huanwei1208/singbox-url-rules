@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071001-cebbank
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071002-network
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071001-cebbank
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071002-network
 ```
 
 Fallback URL:
@@ -71,8 +71,12 @@ Rule behavior:
 
 - Private and local networks go `DIRECT`.
 - The VPN server IP goes `DIRECT` to avoid proxy loops.
-- China DNS and DoH endpoints go `DIRECT`, so CN DNS requests such as
-  `223.5.5.5:443` do not hit the VPN node.
+- Direct domains use encrypted AliDNS with system DNS only as a fallback.
+  Proxy domains are resolved through the selected proxy, and common hard-coded
+  public DNS destinations are intercepted by Shadowrocket.
+- IPv6 is disabled. Unsupported proxy UDP is rejected instead of silently
+  falling back to the local network, and QUIC is disabled only for proxied
+  traffic so VLESS/TCP uses the more stable HTTP/TCP path.
 - Apple App Store, Apple CDN, Apple ID, and iCloud basics go `DIRECT`, so app
   downloads and updates keep working when the profile is enabled.
 - Mainland China AI tools go `DIRECT`, including DeepSeek, Kimi, Tongyi/Qwen,
@@ -83,8 +87,8 @@ Rule behavior:
   Pinduoduo, Meituan, Zhihu, CHSI, 163/Netease, WPS/Kingsoft, and common
   domestic video platforms.
 - Mainland China banking domains go `DIRECT`, including China Everbright Bank
-  (`cebbank.com`, `cebbank.com.cn`, `95595.com`) and the Everbright Group
-  domain (`ebchina.com`) that can appear in related domestic flows.
+  and the common ICBC, CCB, ABC, BOC, Bank of Communications, CMB, CITIC,
+  Minsheng, SPD, Industrial Bank, PSBC, Huaxia, Ping An, and CGB domain families.
 - Tencent Meeting/Wemeet/VooV Meeting goes `DIRECT`. Clash/Mihomo profiles do
   not use broad port-based STUN/TURN rejects, because those can break meeting
   audio/video paths.
