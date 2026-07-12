@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071002-network
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071201-geolite-lite
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071002-network
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071201-geolite-lite
 ```
 
 Fallback URL:
@@ -69,9 +69,14 @@ Use this profile with your VLESS Reality node stored locally in Shadowrocket.
 
 Rule behavior:
 
+- The Shadowrocket profile is intentionally compact and assumes an up-to-date
+  GeoLite database. Explicit rules are limited to routing exceptions that can
+  override GeoLite: domestic apps using non-China CDN addresses, critical
+  foreign services using regional CDN addresses, Apple, banking, and selected
+  financial services.
 - Private and local networks go `DIRECT`.
 - The VPN server IP goes `DIRECT` to avoid proxy loops.
-- Direct domains use encrypted AliDNS with system DNS only as a fallback.
+- DNS uses encrypted AliDNS with encrypted Tencent DoH as the fallback.
   Proxy domains are resolved through the selected proxy, and common hard-coded
   public DNS destinations are intercepted by Shadowrocket.
 - IPv6 is disabled. Unsupported proxy UDP is rejected instead of silently
@@ -119,6 +124,12 @@ Rule behavior:
 - China domains and China IPs go `DIRECT`.
 - Everything else goes `PROXY`.
 - Common WebRTC/STUN/TURN domains are rejected as a generic privacy guard.
+
+The final routing order is: explicit DIRECT exceptions, explicit PROXY
+exceptions, `.cn/.hk` and `GEOIP,CN/HK` DIRECT, then `FINAL,PROXY`. Large lists
+of ordinary foreign domains are deliberately omitted because `FINAL,PROXY`
+already covers them. Keep the GeoLite database current; an old database can
+misclassify newly allocated CN/HK address ranges.
 
 ## AI Traffic
 
