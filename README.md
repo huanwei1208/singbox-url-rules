@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071201-geolite-lite
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071202-geolite-lite
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071201-geolite-lite
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071202-geolite-lite
 ```
 
 Fallback URL:
