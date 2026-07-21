@@ -183,6 +183,12 @@ payload:
   - DOMAIN-SUFFIX,hxb.com.cn
   - DOMAIN-SUFFIX,pingan.com
   - DOMAIN-SUFFIX,cgbchina.com.cn
+  - DOMAIN-SUFFIX,okx.com
+  - DOMAIN-SUFFIX,okx.com.cn
+  - DOMAIN-SUFFIX,oklink.com
+  - DOMAIN-SUFFIX,okx-dns.com
+  - DOMAIN-KEYWORD,okx
+  - DOMAIN-KEYWORD,okex
   - DOMAIN-KEYWORD,alipay
   - DOMAIN-KEYWORD,wechat
   - DOMAIN-KEYWORD,weixin

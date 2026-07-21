@@ -15,8 +15,8 @@ Reject WebRTC/STUN/TURN privacy endpoints:
 https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/ruleset-reject.yaml
 ```
 
-Direct local, Hong Kong, China, Apple App Store, China DNS, China AI, and China
-daily app traffic:
+Direct local, Hong Kong, China, Apple App Store, China DNS, China AI, China
+daily app, and OKX traffic:
 
 ```text
 https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/ruleset-direct.yaml
@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge
 
 Proxy foreign AI, Gemini, Google AI dependencies, foreign social/messaging,
 GitHub/developer platforms, TradingView, Wise, Robinhood, non-HK overseas
-brokerages, OKX, Binance, and BiyaPay:
+brokerages, Binance, and BiyaPay:
 
 ```text
 https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/main/clash-verge/ruleset-proxy.yaml
@@ -44,8 +44,8 @@ with cache-busting URLs and new local paths:
 
 ```text
 https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-reject.yaml?cb=2026070201-robinhood
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026070201-robinhood
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026070201-robinhood
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026072101-okx-direct
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026072101-okx-direct
 ```
 
 ## Rule Order
@@ -65,13 +65,14 @@ rules:
 ```
 
 The explicit proxy provider must stay before the broad CN direct provider. This
-keeps domains such as Google-owned `.cn` hosts or `okx.com.cn` on the proxy path
-when they are intentionally listed in `foreign-proxy`.
+keeps domains such as Google-owned `.cn` hosts on the proxy path when they are
+intentionally listed in `foreign-proxy`.
 
 The explicit proxy provider is placed before the broad HK/CN direct rules. This
-keeps intentionally proxied services such as BIT, Bitget, Wise, Robinhood, OKX,
+keeps intentionally proxied services such as BIT, Bitget, Wise, Robinhood,
 Binance, and Google on the proxy path even if they use mixed regional
-infrastructure.
+infrastructure. OKX, legacy OKEx identifiers, and OKLink are intentionally
+listed in the direct provider.
 
 Do not add broad `DST-PORT` rejects for STUN/TURN ports such as 3478, 5349, or
 19302-19309 in this Clash/Mihomo profile. They can break legitimate meeting

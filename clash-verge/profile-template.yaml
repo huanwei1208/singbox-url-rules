@@ -81,14 +81,14 @@ rule-providers:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026070201-robinhood
+    url: https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-direct.yaml?cb=2026072101-okx-direct
     path: ./ruleset-direct-2026070201.yaml
     interval: 86400
   foreign-proxy:
     type: http
     behavior: classical
     format: yaml
-    url: https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026070201-robinhood
+    url: https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/clash-verge/ruleset-proxy.yaml?cb=2026072101-okx-direct
     path: ./ruleset-proxy-2026070201.yaml
     interval: 86400
 

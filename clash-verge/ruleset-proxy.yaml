@@ -280,10 +280,6 @@ payload:
   - DOMAIN-SUFFIX,robinhood.com
   - DOMAIN-SUFFIX,aboutrobinhood.com
   - DOMAIN-SUFFIX,sherwood.news
-  - DOMAIN-SUFFIX,okx.com
-  - DOMAIN-SUFFIX,okx.com.cn
-  - DOMAIN-SUFFIX,oklink.com
-  - DOMAIN-SUFFIX,okx-dns.com
   - DOMAIN-SUFFIX,binance.com
   - DOMAIN-SUFFIX,binance.us
   - DOMAIN-SUFFIX,binance.info
@@ -321,8 +317,6 @@ payload:
   - DOMAIN-KEYWORD,firstrade
   - DOMAIN-KEYWORD,robinhood
   - DOMAIN-KEYWORD,sherwood
-  - DOMAIN-KEYWORD,okx
-  - DOMAIN-KEYWORD,okex
   - DOMAIN-KEYWORD,binance
   - DOMAIN-KEYWORD,biyapay
   - DOMAIN-KEYWORD,hxdsmy

@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071202-geolite-lite
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026072101-okx-direct
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026071202-geolite-lite
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026072101-okx-direct
 ```
 
 Fallback URL:
@@ -119,8 +119,8 @@ Rule behavior:
   GitLab, Bitbucket, and Stack Overflow.
 - TradingView goes `PROXY`, including charting, screeners, explore-style pages,
   widgets, websocket/pushstream, and static assets.
-- Wise, BIT/Bitget, OKX, Binance, BiyaPay, Robinhood, Plasma One Card, and
-  iFAST GB go `PROXY` for route consistency through the same personal VPN exit.
+- OKX/legacy OKEx and OKLink go `DIRECT`. Wise, BIT/Bitget, Binance, BiyaPay, Robinhood,
+  Plasma One Card, and iFAST GB remain on `PROXY` for route consistency.
 - China domains and China IPs go `DIRECT`.
 - Everything else goes `PROXY`.
 - Common WebRTC/STUN/TURN domains are rejected as a generic privacy guard.
@@ -193,10 +193,11 @@ and proxy paths.
 
 ## Financial Services, Brokerages, and Crypto Exchanges
 
-Wise, BIT/Bitget, OKX, Binance, BiyaPay, Robinhood, Plasma One Card, and iFAST
-GB are intentionally forced through the proxy so account sessions, API calls,
-static resources, and websocket traffic use the same personal VPN exit. Hong
-Kong brokerages are intentionally direct. BiyaPay also uses `hxdsmy.com` for
+OKX/legacy OKEx and OKLink are intentionally direct. Wise, BIT/Bitget, Binance, BiyaPay,
+Robinhood, Plasma One Card, and iFAST GB are forced through the proxy so their
+account sessions, API calls, static resources, and websocket traffic use the
+same personal VPN exit. Hong Kong brokerages are intentionally direct. BiyaPay
+also uses `hxdsmy.com` for
 public static resources, so that domain is proxied with BiyaPay. Robinhood
 support covers `robinhood.com` plus official Robinhood adjacent domains such as
 `aboutrobinhood.com` and `sherwood.news`. BIT support covers `bit.com` plus
