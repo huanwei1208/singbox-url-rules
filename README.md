@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026072101-okx-direct
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026101501-okx-direct
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026072101-okx-direct
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026101501-okx-direct
 ```
 
 Fallback URL:
@@ -66,6 +66,10 @@ files.
 ## Intended Behavior
 
 Use this profile with your VLESS Reality node stored locally in Shadowrocket.
+Activate this profile and select **Global Routing > Config**. **Proxy** mode
+ignores these routing rules, including the OKX `DIRECT` exceptions. After
+refreshing the profile, reconnect the VPN and reopen OKX to replace existing
+proxy connections.
 
 Rule behavior:
 
@@ -119,7 +123,12 @@ Rule behavior:
   GitLab, Bitbucket, and Stack Overflow.
 - TradingView goes `PROXY`, including charting, screeners, explore-style pages,
   widgets, websocket/pushstream, and static assets.
-- OKX/legacy OKEx and OKLink go `DIRECT`. Wise, BIT/Bitget, Binance, BiyaPay, Robinhood,
+- OKX/legacy OKEx, OKLink, OKG resources, and the `coinall.ltd` and
+  `jingyunyilian.com` static-resource domains go `DIRECT`. Explicit rules also
+  cover OKX's Cloudflare CDN aliases and the observed `dkapi.geetest.com`
+  captcha endpoint; shared Cloudflare/CloudFront domains are not blanket-direct.
+  Direct traffic uses the device's local network, not the VPS exit. Wise,
+  BIT/Bitget, Binance, BiyaPay, Robinhood,
   Plasma One Card, and iFAST GB remain on `PROXY` for route consistency.
 - China domains and China IPs go `DIRECT`.
 - Everything else goes `PROXY`.
