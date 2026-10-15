@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026101502-okx-images
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026101503-okx-wallet-alias
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026101502-okx-images
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026101503-okx-wallet-alias
 ```
 
 Fallback URL:
@@ -132,6 +132,11 @@ Rule behavior:
   static assets can use the VPN while website/API/trading traffic stays direct.
   A public image download was verified through VLESS; image loading on the
   device still requires verification after refreshing the profile.
+  The DNS-confirmed `wallet.okx.com` alias
+  `d1w1p0smpsoh5j.cloudfront.net` is also direct. Other CloudFront distributions
+  seen alongside OKX are not assumed to be its market-data APIs without
+  ownership evidence. The static CDN proxy exception also covers chart scripts
+  hosted there; domain rules cannot distinguish those scripts from images.
   Direct traffic uses the device's local network, not the VPS exit. Wise,
   BIT/Bitget, Binance, BiyaPay, Robinhood,
   Plasma One Card, and iFAST GB remain on `PROXY` for route consistency.
