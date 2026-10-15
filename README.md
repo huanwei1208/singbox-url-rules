@@ -17,13 +17,13 @@ shadowrocket/shadowrocket-cn-direct.conf
 Recommended import URL:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026101501-okx-direct
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026101502-okx-images
 ```
 
 Cache-busting URL for immediate refresh after edits:
 
 ```text
-https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026101501-okx-direct
+https://raw.githubusercontent.com/huanwei1208/singbox-url-rules/master/shadowrocket/shadowrocket-cn-direct.conf?cb=2026101502-okx-images
 ```
 
 Fallback URL:
@@ -127,6 +127,11 @@ Rule behavior:
   `jingyunyilian.com` static-resource domains go `DIRECT`. Explicit rules also
   cover OKX's Cloudflare CDN aliases and the observed `dkapi.geetest.com`
   captcha endpoint; shared Cloudflare/CloudFront domains are not blanket-direct.
+  The exact international static hostname `static.okx.com` and its Cloudflare
+  alias are `PROXY` exceptions before the broad OKX rules, so images and other
+  static assets can use the VPN while website/API/trading traffic stays direct.
+  A public image download was verified through VLESS; image loading on the
+  device still requires verification after refreshing the profile.
   Direct traffic uses the device's local network, not the VPS exit. Wise,
   BIT/Bitget, Binance, BiyaPay, Robinhood,
   Plasma One Card, and iFAST GB remain on `PROXY` for route consistency.
